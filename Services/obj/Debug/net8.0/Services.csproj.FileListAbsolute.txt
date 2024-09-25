@@ -1,0 +1,17 @@
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\Services.deps.json
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\Services.dll
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\Services.pdb
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.dll
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\refint\Services.dll
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.pdb
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\ref\Services.dll
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\BusinessObjects.dll
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\Repositories.dll
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\Repositories.pdb
+D:\WebAPI\IdentityAjax\Services\bin\Debug\net8.0\BusinessObjects.pdb
+D:\WebAPI\IdentityAjax\Services\obj\Debug\net8.0\Services.csproj.CopyComplete
