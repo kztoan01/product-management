@@ -55,7 +55,7 @@ namespace Services.Product_Service
 
             return product;
         }
-        public async Task<IEnumerable<Product>> SearchProductsAsync(ProductQuery query)
+        public async Task<IEnumerable<ProductResponse>> SearchProductsAsync(ProductQuery query)
         {
             return await _unitOfWork.Products.SearchAsync(query);
         }

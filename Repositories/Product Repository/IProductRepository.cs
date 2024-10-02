@@ -11,7 +11,7 @@ namespace Repositories.Product_Repository
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
-        Task<IEnumerable<Product>> SearchAsync(ProductQuery query);
+        Task<IEnumerable<ProductResponse>> SearchAsync(ProductQuery query);
     }
 
 }

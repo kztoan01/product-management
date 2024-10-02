@@ -16,9 +16,9 @@ namespace Repositories.Product_Repository
         {
         }
 
-        public async Task<IEnumerable<Product>> SearchAsync(ProductQuery query)
+        public async Task<IEnumerable<ProductResponse>> SearchAsync(ProductQuery query)
         {
-            IQueryable<Product> products = _dbSet.Include(p => p.Category);  
+            IQueryable<Product> products = _dbSet.Include(p => p.Category);
 
             if (!string.IsNullOrEmpty(query.ProductName))
             {
@@ -39,9 +39,36 @@ namespace Repositories.Product_Repository
             {
                 products = products.Where(p => p.UnitPrice <= query.MaxPrice.Value);
             }
+            if (!string.IsNullOrEmpty(query.SortBy))
+            {
+                products = query.SortOrder.ToLower() == "desc"
+                    ? products.OrderByDescending(e => EF.Property<object>(e, query.SortBy))
+                    : products.OrderBy(e => EF.Property<object>(e, query.SortBy));
+            }
 
-            return await products.ToListAsync();
+            products = products.Skip((query.Page - 1) * query.PageSize).Take(query.PageSize);
+
+            if (query.SelectFields != null && query.SelectFields.Any())
+            {
+                products = products.Select(p => (Product)Activator.CreateInstance(typeof(Product),
+                    query.SelectFields.Select(field => typeof(Product).GetProperty(field).GetValue(p)).ToArray()));
+            }
+
+            var productDtos = await products
+        .Select(p => new ProductResponse
+        {
+            ProductId = p.ProductId,
+            ProductName = p.ProductName,
+            CategoryId = p.CategoryId,
+            CategoryName = p.Category.CategoryName,
+            UnitsInStock = p.UnitsInStock,
+            UnitPrice = p.UnitPrice
+        })
+        .ToListAsync();
+
+    return productDtos;
         }
+
     }
 
 }

@@ -1,15 +1,31 @@
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.deps.json
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.pdb
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\refint\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.pdb
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\ref\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\BusinessObjects.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\BusinessObjects.pdb
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
+D:/WebAPI/IdentityAjax/Repositories/bin/Debug/net8.0/Repositories.deps.json
+D:/WebAPI/IdentityAjax/Repositories/bin/Debug/net8.0/Repositories.dll
+D:/WebAPI/IdentityAjax/Repositories/bin/Debug/net8.0/Repositories.pdb
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfoInputs.cache
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfo.cs
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.csproj.CoreCompileInputs.cache
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.dll
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/refint/Repositories.dll
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.pdb
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/ref/Repositories.dll
+D:/WebAPI/IdentityAjax/Repositories/bin/Debug/net8.0/BusinessObjects.dll
+D:/WebAPI/IdentityAjax/Repositories/bin/Debug/net8.0/BusinessObjects.pdb
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.csproj.AssemblyReference.cache
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.csproj.CopyComplete
+/Applications/Development/Side project/product-management/Repositories/bin/Debug/net8.0/Repositories.deps.json
+/Applications/Development/Side project/product-management/Repositories/bin/Debug/net8.0/Repositories.dll
+/Applications/Development/Side project/product-management/Repositories/bin/Debug/net8.0/Repositories.pdb
+/Applications/Development/Side project/product-management/Repositories/bin/Debug/net8.0/BusinessObjects.dll
+/Applications/Development/Side project/product-management/Repositories/bin/Debug/net8.0/BusinessObjects.pdb
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.csproj.AssemblyReference.cache
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfoInputs.cache
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfo.cs
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.csproj.CoreCompileInputs.cache
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.sourcelink.json
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Reposito.787EC4B2.Up2Date
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.dll
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/refint/Repositories.dll
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.pdb
+/Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/ref/Repositories.dll

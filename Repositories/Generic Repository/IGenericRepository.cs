@@ -15,5 +15,6 @@ namespace Repositories.Generic_Repository
         Task<T> AddAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task<T> DeleteAsync(T entity);
+        Task<IEnumerable<T>> SearchAsync(SearchQuery query);
     }
 }

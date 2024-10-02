@@ -6,12 +6,37 @@ using System.Threading.Tasks;
 
 namespace BusinessObjects.Objects
 {
-    public class ProductQuery
-    {
-        public string ProductName { get; set; }
-        public int? CategoryId { get; set; } 
-        public decimal? MinPrice { get; set; }
-        public decimal? MaxPrice { get; set; }
-    }
+using System.Text.Json.Serialization;
+
+public class ProductQuery
+{
+    [JsonPropertyName("product-name")]
+    public string ProductName { get; set; }
+
+    [JsonPropertyName("category-id")]
+    public int? CategoryId { get; set; }
+
+    [JsonPropertyName("min-price")]
+    public decimal? MinPrice { get; set; }
+
+    [JsonPropertyName("max-price")]
+    public decimal? MaxPrice { get; set; }
+
+    [JsonPropertyName("sort-by")]
+    public string SortBy { get; set; }
+
+    [JsonPropertyName("sort-order")]
+    public string SortOrder { get; set; } = "asc";
+
+    [JsonPropertyName("page")]
+    public int Page { get; set; } = 1;
+
+    [JsonPropertyName("page-size")]
+    public int PageSize { get; set; } = 10;
+
+    [JsonPropertyName("select-fields")]
+    public string[] SelectFields { get; set; }
+}
+
 
 }

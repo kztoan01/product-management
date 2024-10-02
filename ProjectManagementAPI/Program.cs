@@ -1,6 +1,7 @@
 
 using BusinessObjects;
 using BusinessObjects.Objects;
+using controller.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Category_Repository;
 using Repositories.Generic_Repository;
@@ -49,7 +50,7 @@ namespace ProjectManagementAPI
             }
 
             app.UseHttpsRedirection();
-
+            app.MigrationDB();
             app.UseAuthorization();
 
 

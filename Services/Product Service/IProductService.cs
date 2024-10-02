@@ -15,6 +15,6 @@ namespace Services.Product_Service
         Task<Product> AddProductAsync(Product product);
         Task<Product> UpdateProductAsync(Product product);
         Task<Product> DeleteProductAsync(int id);
-        Task<IEnumerable<Product>> SearchProductsAsync(ProductQuery query);
+        Task<IEnumerable<ProductResponse>> SearchProductsAsync(ProductQuery query);
     }
 }

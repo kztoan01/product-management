@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  sql-server-2022-container:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    hostname: sql-server-2022-container
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Toan@123456789
+    ports:
+      - "1435:1433"
+    networks:
+      - lab
+    volumes:
+      - ./init.sql:/init.sql
+
+  lab3-svc:
+    hostname: lab3-svc
+    networks:
+      - lab
+    build:
+      context: .
+      dockerfile: ./ProjectManagementAPI/Dockerfile
+    ports:
+      - 8080:8080
+    depends_on:
+      - sql-server-2022-container
+    entrypoint: /bin/sh -c "sleep 10 && dotnet ProjectManagementAPI.dll"
+
+networks:
+  lab:
+    driver: bridge
