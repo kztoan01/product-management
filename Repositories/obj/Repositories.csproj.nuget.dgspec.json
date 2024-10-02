@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj": {}
+    "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "/Applications/Development/Side project/product-management/BusinessObjects/BusinessObjects.csproj": {
+    "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\BusinessObjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Applications/Development/Side project/product-management/BusinessObjects/BusinessObjects.csproj",
+        "projectUniqueName": "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\BusinessObjects.csproj",
         "projectName": "BusinessObjects",
-        "projectPath": "/Applications/Development/Side project/product-management/BusinessObjects/BusinessObjects.csproj",
-        "packagesPath": "/Users/toanconqueror/.nuget/packages/",
-        "outputPath": "/Applications/Development/Side project/product-management/BusinessObjects/obj/",
+        "projectPath": "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\BusinessObjects.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/toanconqueror/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -84,34 +81,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj": {
+    "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj",
+        "projectUniqueName": "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj",
-        "packagesPath": "/Users/toanconqueror/.nuget/packages/",
-        "outputPath": "/Applications/Development/Side project/product-management/Repositories/obj/",
+        "projectPath": "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WebAPI\\IdentityAjax\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/toanconqueror/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Applications/Development/Side project/product-management/BusinessObjects/BusinessObjects.csproj": {
-                "projectPath": "/Applications/Development/Side project/product-management/BusinessObjects/BusinessObjects.csproj"
+              "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\BusinessObjects.csproj": {
+                "projectPath": "D:\\WebAPI\\IdentityAjax\\BusinessObjects\\BusinessObjects.csproj"
               }
             }
           }
@@ -120,11 +119,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -146,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

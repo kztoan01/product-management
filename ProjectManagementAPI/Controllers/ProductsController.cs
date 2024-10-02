@@ -17,10 +17,31 @@ namespace ProjectManagementAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProducts()
+        public async Task<IActionResult> GetProducts([FromQuery(Name = "product-name")] string? productName,
+        [FromQuery(Name = "category-id")] int? categoryId,
+        [FromQuery(Name = "min-price")] decimal? minPrice,
+        [FromQuery(Name = "max-price")] decimal? maxPrice,
+        [FromQuery(Name = "sort-by")] string? sortBy,
+        [FromQuery(Name = "sort-order")] string? sortOrder = "asc",
+        [FromQuery(Name = "page")] int page = 1,
+        [FromQuery(Name = "page-size")] int pageSize = 99,
+        [FromQuery(Name = "select-fields")] string[] selectFields = null)
         {
-            var products = await _productService.GetAllProductsAsync();
-            return Ok(products);  
+            var query = new ProductQuery
+            {
+                ProductName = productName,
+                CategoryId = categoryId,
+                MinPrice = minPrice,
+                MaxPrice = maxPrice,
+                SortBy = sortBy,
+                SortOrder = sortOrder,
+                Page = page,
+                PageSize = pageSize,
+                SelectFields = selectFields
+            };
+
+            var products = await _productService.SearchProductsAsync(query);
+            return Ok(products);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProduct(int id)
@@ -85,12 +106,33 @@ namespace ProjectManagementAPI.Controllers
             }
             return Ok(deletedProduct); 
         }
-        [HttpGet("search")]
-        public async Task<IActionResult> SearchProducts([FromQuery] ProductQuery query)
+        /*[HttpGet("search")]
+        public async Task<IActionResult> SearchProducts([FromQuery(Name = "product-name")] string? productName,
+        [FromQuery(Name = "category-id")] int? categoryId,
+        [FromQuery(Name = "min-price")] decimal? minPrice,
+        [FromQuery(Name = "max-price")] decimal? maxPrice,
+        [FromQuery(Name = "sort-by")] string? sortBy,
+        [FromQuery(Name = "sort-order")] string? sortOrder = "asc",
+        [FromQuery(Name = "page")] int page = 1,
+        [FromQuery(Name = "page-size")] int pageSize = 99,
+        [FromQuery(Name = "select-fields")] string[] selectFields = null)
         {
+            var query = new ProductQuery
+            {
+                ProductName = productName,
+                CategoryId = categoryId,
+                MinPrice = minPrice,
+                MaxPrice = maxPrice,
+                SortBy = sortBy,
+                SortOrder = sortOrder,
+                Page = page,
+                PageSize = pageSize,
+                SelectFields = selectFields
+            };
+
             var products = await _productService.SearchProductsAsync(query);
             return Ok(products); 
-        }
+        }*/
 
     }
 

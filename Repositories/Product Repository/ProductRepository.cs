@@ -20,6 +20,7 @@ namespace Repositories.Product_Repository
         {
             IQueryable<Product> products = _dbSet.Include(p => p.Category);
 
+            // Filtering logic
             if (!string.IsNullOrEmpty(query.ProductName))
             {
                 products = products.Where(p => p.ProductName.Contains(query.ProductName));
@@ -39,6 +40,7 @@ namespace Repositories.Product_Repository
             {
                 products = products.Where(p => p.UnitPrice <= query.MaxPrice.Value);
             }
+
             if (!string.IsNullOrEmpty(query.SortBy))
             {
                 products = query.SortOrder.ToLower() == "desc"
@@ -48,26 +50,21 @@ namespace Repositories.Product_Repository
 
             products = products.Skip((query.Page - 1) * query.PageSize).Take(query.PageSize);
 
-            if (query.SelectFields != null && query.SelectFields.Any())
-            {
-                products = products.Select(p => (Product)Activator.CreateInstance(typeof(Product),
-                    query.SelectFields.Select(field => typeof(Product).GetProperty(field).GetValue(p)).ToArray()));
-            }
-
             var productDtos = await products
-        .Select(p => new ProductResponse
-        {
-            ProductId = p.ProductId,
-            ProductName = p.ProductName,
-            CategoryId = p.CategoryId,
-            CategoryName = p.Category.CategoryName,
-            UnitsInStock = p.UnitsInStock,
-            UnitPrice = p.UnitPrice
-        })
-        .ToListAsync();
+                .Select(p => new ProductResponse
+                {
+                    ProductId = p.ProductId,
+                    ProductName = p.ProductName,
+                    CategoryId = p.CategoryId,
+                    CategoryName = p.Category.CategoryName,
+                    UnitsInStock = p.UnitsInStock,
+                    UnitPrice = p.UnitPrice
+                })
+                .ToListAsync();
 
-    return productDtos;
+            return productDtos;
         }
+
 
     }
 

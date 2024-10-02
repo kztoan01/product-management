@@ -11,7 +11,6 @@ namespace BusinessObjects.Objects
     {
         public override string ConvertName(string name)
         {
-            // Convert camel case to hyphenated case
             var builder = new StringBuilder();
             for (int i = 0; i < name.Length; i++)
             {

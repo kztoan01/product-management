@@ -80,12 +80,12 @@ namespace ProjectManagementAPI.Controllers
             }
             return Ok(deletedCate);  
         }
-        [HttpGet("search")]
+       /* [HttpGet("search")]
         public async Task<IActionResult> SearchCategories([FromQuery] CategoryQuery query)
         {
             var categories = await _categoryService.SearchCategoriesAsync(query);
             return Ok(categories); 
-        }
+        }*/
     }
 
 }

@@ -1,6 +1,6 @@
 {
-  "BusinessObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Applications\/Development\/Side project\/product-management\/BusinessObjects",
-  "ProjectManagementAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Applications\/Development\/Side project\/product-management\/ProjectManagementAPI",
-  "Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Applications\/Development\/Side project\/product-management\/Repositories",
-  "Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Applications\/Development\/Side project\/product-management\/Services"
+  "BusinessObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\WebAPI\\IdentityAjax\\BusinessObjects",
+  "ProjectManagementAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\WebAPI\\IdentityAjax\\ProjectManagementAPI",
+  "Repositories, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\WebAPI\\IdentityAjax\\Repositories",
+  "Services, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\WebAPI\\IdentityAjax\\Services"
 }
