@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -8,20 +10,11 @@ using System.Threading.Tasks;
 
 namespace BusinessObjects
 {
-    public class MyDbContext : DbContext
+    public class MyDbContext : IdentityDbContext<AppUser>
     {
-        public MyDbContext() { }
-        public MyDbContext(DbContextOptions<MyDbContext> dbContextOptions)
+        public MyDbContext(DbContextOptions dbContextOptions)
        : base(dbContextOptions)
         {
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            var builder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
-            IConfigurationRoot configuration = builder.Build();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
         public DbSet<Category> Categories { get; set; }
 
@@ -29,6 +22,7 @@ namespace BusinessObjects
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Category>().HasData(
                 new Category { CategoryId = 1, CategoryName = "Beverages" },
                 new Category { CategoryId = 2, CategoryName = "Condiments" },
@@ -62,6 +56,22 @@ namespace BusinessObjects
                 new Product { ProductId = 19, ProductName = "GoPro HERO10", CategoryId = 6, UnitsInStock = 90, UnitPrice = 399.99M },
                 new Product { ProductId = 20, ProductName = "Nikon D7500 Camera", CategoryId = 8, UnitsInStock = 40, UnitPrice = 1199.99M }
             );
+            // modelBuilder.Entity<AppUser>()
+            //     .HasNoKey();
+            List<IdentityRole> roles = new List<IdentityRole>
+                {
+                    new IdentityRole
+                    {
+                        Name = "Admin",
+                        NormalizedName = "ADMIN"
+                    },
+                    new IdentityRole
+                    {
+                        Name = "User",
+                        NormalizedName = "USER"
+                    },
+                };
+            modelBuilder.Entity<IdentityRole>().HasData(roles);
         }
 
     }
