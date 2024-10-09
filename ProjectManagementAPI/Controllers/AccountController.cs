@@ -9,7 +9,7 @@ using Services.TokenService;
 
 namespace ProjectManagementAPI.Controllers
 {
-    [Route("api/account")]
+    [Route("api/accounts")]
     [ApiController]
     public class AccountController : ControllerBase
     {
