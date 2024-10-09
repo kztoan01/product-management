@@ -7,13 +7,12 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
+    
     - name: Login Dockerhub
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
@@ -21,7 +20,7 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build -t product-management -f ProjectManagementAPI/Dockerfile .
+      run: docker build -t toanconquers/product-management:latest -f ProjectManagementAPI/Dockerfile .
       
     - name: Push to Dockerhub
       run: docker push toanconquers/product-management:latest
