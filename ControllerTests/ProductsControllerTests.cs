@@ -19,7 +19,10 @@ namespace ControllerTests
 
         public ProductsControllerTests(WebApplicationFactory<Program> factory)
         {
-            _client = factory.CreateClient();
+            _client = factory.CreateClient(new WebApplicationFactoryClientOptions
+            {
+                BaseAddress = new Uri("http://localhost:8080")
+            });
         }
         [Fact]
         public async Task CreateProduct_Returns_Correct_Json_Property_Name()

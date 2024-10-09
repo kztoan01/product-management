@@ -3150,34 +3150,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "/Users/toanconqueror/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebAPI\\IdentityAjax\\Services\\Services.csproj",
+      "projectUniqueName": "/Applications/Development/Side project/product-management/Services/Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\WebAPI\\IdentityAjax\\Services\\Services.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\WebAPI\\IdentityAjax\\Services\\obj\\",
+      "projectPath": "/Applications/Development/Side project/product-management/Services/Services.csproj",
+      "packagesPath": "/Users/toanconqueror/.nuget/packages/",
+      "outputPath": "/Applications/Development/Side project/product-management/Services/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/toanconqueror/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\WebAPI\\IdentityAjax\\Repositories\\Repositories.csproj"
+            "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj": {
+              "projectPath": "/Applications/Development/Side project/product-management/Repositories/Repositories.csproj"
             }
           }
         }
@@ -3186,6 +3184,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3207,7 +3210,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

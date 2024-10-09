@@ -29,19 +29,4 @@ D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.csproj.CopyCom
 /Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/refint/Repositories.dll
 /Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/Repositories.pdb
 /Applications/Development/Side project/product-management/Repositories/obj/Debug/net8.0/ref/Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.deps.json
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\Repositories.pdb
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\BusinessObjects.dll
-D:\WebAPI\IdentityAjax\Repositories\bin\Debug\net8.0\BusinessObjects.pdb
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.AssemblyReference.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfoInputs.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.AssemblyInfo.cs
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.CoreCompileInputs.cache
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.sourcelink.json
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.csproj.CopyComplete
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\refint\Repositories.dll
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\Repositories.pdb
-D:\WebAPI\IdentityAjax\Repositories\obj\Debug\net8.0\ref\Repositories.dll
+D:/WebAPI/IdentityAjax/Repositories/obj/Debug/net8.0/Repositories.sourcelink.json
