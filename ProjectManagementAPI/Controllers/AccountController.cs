@@ -9,7 +9,7 @@ using Services.TokenService;
 
 namespace ProjectManagementAPI.Controllers
 {
-    [Route("api/accounts")]
+    [Route("api/account")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -23,60 +23,60 @@ namespace ProjectManagementAPI.Controllers
         }
 
         [HttpPost("register")]
-public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
-{
-    try
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        var appUser = new AppUser
+        public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
         {
-            UserName = registerRequest.Username,
-            Email = registerRequest.Email,
-            RefreshToken = _tokenService.GenerateRefreshToken(), 
-            RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7) 
-        };
-
-        var getUserEmail = await _userManager.FindByEmailAsync(registerRequest.Email);
-
-        if (getUserEmail != null)
-        {
-            return StatusCode(500, "Email already exists");
-        }
-
-        var createdUser = await _userManager.CreateAsync(appUser, registerRequest.Password);
-
-        if (createdUser.Succeeded)
-        {
-            var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
-            if (roleResult.Succeeded)
+            try
             {
-                return Ok(
-                    new RegisterResponse
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                var appUser = new AppUser
+                {
+                    UserName = registerRequest.Username,
+                    Email = registerRequest.Email,
+                    RefreshToken = _tokenService.GenerateRefreshToken(),
+                    RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7)
+                };
+
+                var getUserEmail = await _userManager.FindByEmailAsync(registerRequest.Email);
+
+                if (getUserEmail != null)
+                {
+                    return StatusCode(500, "Email already exists");
+                }
+
+                var createdUser = await _userManager.CreateAsync(appUser, registerRequest.Password);
+
+                if (createdUser.Succeeded)
+                {
+                    var roleResult = await _userManager.AddToRoleAsync(appUser, "User");
+                    if (roleResult.Succeeded)
                     {
-                        UserName = appUser.UserName,
-                        Email = appUser.Email,
-                        Token = _tokenService.CreateToken(appUser),
-                        RefreshToken = appUser.RefreshToken 
+                        return Ok(
+                            new RegisterResponse
+                            {
+                                UserName = appUser.UserName,
+                                Email = appUser.Email,
+                                Token = _tokenService.CreateToken(appUser),
+                                RefreshToken = appUser.RefreshToken
+                            }
+                        );
                     }
-                );
+                    else
+                    {
+                        return StatusCode(500, roleResult.Errors);
+                    }
+                }
+                else
+                {
+                    return StatusCode(500, createdUser.Errors);
+                }
             }
-            else
+            catch (Exception e)
             {
-                return StatusCode(500, roleResult.Errors);
+                return StatusCode(500, e);
             }
         }
-        else
-        {
-            return StatusCode(500, createdUser.Errors);
-        }
-    }
-    catch (Exception e)
-    {
-        return StatusCode(500, e);
-    }
-}
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
